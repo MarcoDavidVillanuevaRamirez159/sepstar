@@ -1,0 +1,44 @@
+# Dependencias de NodeJS
+node_modules/
+npm-debug.log
+
+# Archivos de entorno
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos y carpetas de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Carpetas de configuración de IDE
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Archivos de logs
+*.log
+logs/
+log/
+
+# Archivos temporales
+tmp/
+temp/
+
+# Archivos de caché
+.sass-cache/
+*.css.map
+*.js.map
+
+# Archivos de backup
+*.bak
+*.backup
+*~
+
+# Database configs y dumps locales
+*.sql
+/backup/

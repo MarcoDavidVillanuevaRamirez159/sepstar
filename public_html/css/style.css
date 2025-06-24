@@ -1,0 +1,1052 @@
+/* 
+* Sepstar México - Main CSS File
+* Author: GitHub Copilot
+* Version: 1.0
+*/
+
+/* =================== 
+   1. General Styles 
+===================== */
+:root {
+  --primary-color: #0056b3;
+  --secondary-color: #ffc107;
+  --dark-color: #343a40;
+  --light-color: #f8f9fa;
+  --text-color: #333;
+  --text-light: #6c757d;
+  --border-color: #dee2e6;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #004494;
+}
+
+/* =================== 
+   2. Typography 
+===================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.section-subtitle {
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+/* =================== 
+   3. Header Styles 
+===================== */
+.top-bar {
+  background-color: var(--dark-color);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.contact-info span {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.language-selector a {
+  color: #fff;
+  opacity: 0.8;
+  margin: 0 5px;
+}
+
+.language-selector a:hover,
+.language-selector a.active {
+  opacity: 1;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 10px;
+  opacity: 0.8;
+}
+
+.social-icons a:hover {
+  opacity: 1;
+}
+
+.main-header {
+  background-color: #fff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  max-height: 60px;
+}
+
+.navbar-nav .nav-link {
+  color: var(--dark-color);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color);
+}
+
+.navbar-nav .nav-item.active .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.search-box .form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-box .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* =================== 
+   4. Hero Section 
+===================== */
+.hero-slider {
+  position: relative;
+}
+
+.hero-slide {
+  position: relative;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 0;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* =================== 
+   5. About Section 
+===================== */
+.about-section {
+  padding: 5rem 0;
+}
+
+.about-image {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.about-image::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  border-top: 4px solid var(--primary-color);
+  border-left: 4px solid var(--primary-color);
+  z-index: -1;
+}
+
+.about-image::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  border-bottom: 4px solid var(--primary-color);
+  border-right: 4px solid var(--primary-color);
+  z-index: -1;
+}
+
+.about-experience {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-experience span:first-child {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.about-content h2 {
+  margin-bottom: 1.5rem;
+}
+
+.about-feature {
+  margin-top: 2rem;
+}
+
+.about-feature-item {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.about-feature-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 86, 179, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+/* =================== 
+   6. Services Section 
+===================== */
+.services-section {
+  padding: 5rem 0;
+  background-color: var(--light-color);
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.1);
+}
+
+.service-content {
+  padding: 1.5rem;
+}
+
+.service-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-content p {
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.service-content .btn {
+  padding: 0.5rem 1.5rem;
+}
+
+/* =================== 
+   7. Products Section 
+===================== */
+.products-section {
+  padding: 5rem 0;
+}
+
+.product-filters {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.product-filter-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 5px 10px;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.product-filter-btn:hover,
+.product-filter-btn.active {
+  color: var(--primary-color);
+}
+
+.product-card {
+  margin-bottom: 30px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.1);
+}
+
+.product-content {
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
+.product-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-category {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.product-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-btn {
+  padding: 0.35rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* =================== 
+   8. Team Section 
+===================== */
+.team-section {
+  padding: 5rem 0;
+  background-color: var(--light-color);
+}
+
+.team-card {
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+.team-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-image img {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover .team-image img {
+  transform: scale(1.1);
+}
+
+.team-social {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+
+.team-card:hover .team-social {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-social a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: var(--dark-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.team-social a:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.team-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.team-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-position {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+/* =================== 
+   9. Testimonial Section 
+===================== */
+.testimonial-section {
+  padding: 5rem 0;
+  background-image: url("/img/testimonial-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.testimonial-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.testimonial-section .section-title h2 {
+  color: #fff;
+}
+
+.testimonial-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  position: relative;
+}
+
+.testimonial-item::before {
+  content: "\f10d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.testimonial-text {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-author-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.testimonial-author-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-author-info h4 {
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+}
+
+.testimonial-company {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* =================== 
+   10. News Section 
+===================== */
+.news-section {
+  padding: 5rem 0;
+}
+
+.news-card {
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.news-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.news-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.news-card:hover .news-image img {
+  transform: scale(1.1);
+}
+
+.news-date {
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-content {
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.news-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.news-content p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.news-meta {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.news-meta span {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.news-meta i {
+  margin-right: 0.5rem;
+}
+
+/* =================== 
+   11. Contact Section 
+===================== */
+.contact-section {
+  padding: 5rem 0;
+}
+
+.contact-info-item {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.contact-info-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 86, 179, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.contact-info-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-content p {
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+.contact-form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+.contact-form .form-control {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form .form-control:focus {
+  box-shadow: none;
+  border-color: var(--primary-color);
+}
+
+.contact-map {
+  height: 100%;
+  min-height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* =================== 
+   12. Footer Styles 
+===================== */
+.footer {
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+.footer-logo {
+  max-height: 60px;
+}
+
+.footer-heading {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  padding-left: 5px;
+}
+
+.footer-contact {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.footer-contact li {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.footer-contact li i {
+  margin-right: 0.75rem;
+  width: 20px;
+  color: var(--primary-color);
+}
+
+.footer-contact a {
+  color: #ccc;
+}
+
+.footer-contact a:hover {
+  color: #fff;
+}
+
+.newsletter .form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 0.9rem;
+}
+
+.newsletter .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.footer-copyright {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.footer-bottom-logo {
+  max-height: 40px;
+  transition: all 0.3s ease;
+  background-color: transparent !important;
+  mix-blend-mode: multiply;
+}
+
+.footer-bottom-logo:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.footer-logo-container {
+  display: inline-block;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.footer-bottom {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom-links {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-bottom-links li {
+  margin-left: 1.5rem;
+}
+
+.footer-bottom-links a {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.footer-bottom-links a:hover {
+  color: #fff;
+}
+
+/* =================== 
+   13. Back to Top Button 
+===================== */
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 99;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.back-to-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: #004494;
+  color: #fff;
+}
+
+/* =================== 
+   14. Cookie Consent 
+===================== */
+.cookie-consent {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 1rem 0;
+  z-index: 9999;
+  display: none;
+}
+
+/* =================== 
+   15. Whatsapp Button 
+===================== */
+.whatsapp-button {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  z-index: 98;
+}
+
+.whatsapp-button:hover {
+  background-color: #20ba5a;
+  color: #fff;
+}
+
+/* =================== 
+   16. Responsive Styles 
+===================== */
+@media (max-width: 1199.98px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-slide {
+    height: 500px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .about-image::before,
+  .about-image::after {
+    display: none;
+  }
+
+  .about-experience {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about-experience span:first-child {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .hero-slide {
+    height: 400px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .contact-map {
+    margin-top: 2rem;
+  }
+
+  .footer-bottom-links {
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+  }
+
+  .footer-bottom-links li {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+
+  .about-experience {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin: -50px auto 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.75rem;
+  }
+}

@@ -1,0 +1,125 @@
+# Archivo .htaccess para Sepstar México
+
+# Habilitar el motor de reescritura
+RewriteEngine On
+
+# Configuración de la codificación
+AddDefaultCharset UTF-8
+
+# Forzar HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Quitar www
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# URLs amigables para SEO
+# Página de inicio
+RewriteRule ^inicio$ index.php [L]
+
+# Sobre nosotros
+RewriteRule ^sobre-nosotros$ about.php [L]
+
+# Fabricación
+RewriteRule ^capacidad-de-fabricacion$ manufacturing.php [L]
+
+# Productos
+RewriteRule ^productos$ products.php [L]
+RewriteRule ^productos/([a-zA-Z0-9-]+)$ products.php?category=$1 [L]
+RewriteRule ^producto/([a-zA-Z0-9-]+)$ product-detail.php?slug=$1 [L]
+
+# Noticias
+RewriteRule ^noticias$ news.php [L]
+RewriteRule ^noticias/([0-9]+)$ news.php?page=$1 [L]
+RewriteRule ^noticia/([a-zA-Z0-9-]+)$ news-detail.php?slug=$1 [L]
+
+# Contacto
+RewriteRule ^contacto$ contact.php [L]
+
+# Política de privacidad
+RewriteRule ^politica-de-privacidad$ privacy-policy.php [L]
+
+# Términos y condiciones
+RewriteRule ^terminos-de-servicio$ terms-of-service.php [L]
+
+# Mapa del sitio
+RewriteRule ^mapa-del-sitio$ sitemap.php [L]
+
+# Buscador
+RewriteRule ^buscar$ search.php [L]
+
+# Idiomas
+RewriteRule ^es/(.*)$ $1?lang=es [L,QSA]
+RewriteRule ^en/(.*)$ $1?lang=en [L,QSA]
+RewriteRule ^zh/(.*)$ $1?lang=zh [L,QSA]
+
+# Evitar listado de directorios
+Options -Indexes
+
+# Comprimir archivos para mejor rendimiento
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json
+</IfModule>
+
+# Cache de navegador
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Imágenes
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+  
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  
+  # HTML, XML, JSON
+  ExpiresByType text/html "access plus 1 day"
+  ExpiresByType text/xml "access plus 1 day"
+  ExpiresByType application/json "access plus 1 day"
+  
+  # Fuentes
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  ExpiresByType application/x-font-ttf "access plus 1 year"
+  ExpiresByType font/opentype "access plus 1 year"
+  
+  # Por defecto
+  ExpiresDefault "access plus 2 days"
+</IfModule>
+
+# Configuración de seguridad
+<IfModule mod_headers.c>
+  # Prevenir clickjacking
+  Header set X-Frame-Options SAMEORIGIN
+  
+  # Prevenir MIME-sniffing
+  Header set X-Content-Type-Options nosniff
+  
+  # Cross-site scripting protection
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Personalizar páginas de error
+ErrorDocument 404 /404.php
+ErrorDocument 500 /500.php
+
+# Proteger archivos críticos
+<FilesMatch "(^\.htaccess|\.ini|\.log|\.inc|composer\.json|\.htpasswd)">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# Bloquear consultas sospechosas
+RewriteCond %{QUERY_STRING} (eval\() [NC,OR]
+RewriteCond %{QUERY_STRING} (CONCAT\() [NC,OR]
+RewriteCond %{QUERY_STRING} (UNION\+SELECT) [NC,OR]
+RewriteCond %{QUERY_STRING} (SELECT\+FROM) [NC]
+RewriteRule ^(.*)$ - [F,L]
