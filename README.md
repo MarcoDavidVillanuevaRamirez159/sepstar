@@ -1,6 +1,8 @@
-# Sepstar México - Sitio Web Corporativo
+# Sepstar México - Sitio Web Corporativo (2025)
 
 Este repositorio contiene el código fuente para el sitio web corporativo de Sepstar México, una empresa de fabricación que atiende a clientes OEM y ODM en las industrias automotriz y de electrodomésticos en América del Norte.
+
+Última actualización: Junio 2025
 
 ## Estructura del Proyecto
 
