@@ -32,27 +32,28 @@ $breadcrumbs = [
 ?>
 
 <!-- Page Banner -->
-<section class="page-banner" style="background-image: url('<?php echo BASE_URL; ?>/img/hero/hero noticias.jpg');">
-    <div class="container h-100">
+<section class="page-banner" style="background-image: url('<?php echo BASE_URL; ?>/img/productos/headerproductis.png'); background-size: cover; background-position: center; min-height: 440px; position: relative;">
+    <!-- Overlay eliminado para quitar fondo azul -->
+    <div class="container h-100 position-relative" style="z-index:2;">
         <div class="row h-100 align-items-center">
-            <div class="col-lg-6">
-                <div class="page-banner-content" data-aos="fade-right">
-                    <h1 class="page-banner-title"><?php echo $products_texts['page_title']; ?></h1>
-                    <p class="page-banner-subtitle"><?php echo $products_texts['page_subtitle']; ?></p>
+            <div class="col-lg-7">
+                <div class="page-banner-content text-white" data-aos="fade-right">
+                    <h1 class="page-banner-title display-4 fw-bold mb-3"><?php echo $products_texts['page_title']; ?></h1>
+                    <p class="page-banner-subtitle lead mb-0"><?php echo $products_texts['page_subtitle']; ?></p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Products Introduction Section -->
-<section class="products-intro py-5">
+<!-- Products Introduction Section (movido más abajo con mayor separación) -->
+<section class="products-intro py-5" style="padding-top: 5rem !important;">
     <div class="container py-4">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title"><?php echo $products_texts['products_title']; ?></h2>
-                <p class="section-subtitle"><?php echo $products_texts['products_subtitle']; ?></p>
-                <p class="lead"><?php echo $products_texts['products_desc']; ?></p>
+                <h2 class="section-title display-5 fw-bold mb-3"><?php echo $products_texts['products_title']; ?></h2>
+                <p class="section-subtitle lead mb-2"><?php echo $products_texts['products_subtitle']; ?></p>
+                <p class="lead text-muted"><?php echo $products_texts['products_desc']; ?></p>
             </div>
         </div>
     </div>
@@ -63,70 +64,67 @@ $breadcrumbs = [
     <div class="container py-4">
         <div class="row mb-4">
             <div class="col-lg-8" data-aos="fade-up">
-                <h3 class="section-title"><?php echo $products_texts['featured_products']; ?></h3>
-                <p class="section-subtitle"><?php echo $products_texts['featured_desc']; ?></p>
+                <h3 class="section-title fw-bold mb-2"><?php echo $products_texts['featured_products']; ?></h3>
+                <p class="section-subtitle text-muted mb-0"><?php echo $products_texts['featured_desc']; ?></p>
             </div>
         </div>
-        
         <div class="row">
-            <!-- Featured Product 1 -->
+            <!-- Producto 1 -->
             <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="product-card h-100 bg-white rounded shadow overflow-hidden">
-                    <div class="product-image">
-                        <img src="/img/product1.jpg" alt="<?php echo $products_texts['product1_name']; ?>" class="img-fluid w-100">
-                        <div class="product-overlay">
-                            <a href="/product-detail.php?id=1" class="btn btn-primary"><?php echo $products_texts['view_details']; ?></a>
+                    <div class="product-image position-relative" style="background:#f8f9fa; min-height:220px; display:flex; align-items:center; justify-content:center;">
+                        <img src="<?php echo BASE_URL; ?>/img/productos/luces traseras.jpg" alt="Luces traseras automotrices" class="img-fluid" style="max-height:180px; object-fit:contain;">
+                        <div class="product-overlay d-flex align-items-center justify-content-center" style="opacity:0; transition:opacity .3s; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,56,179,0.7);">
+                            <a href="/product-detail.php?id=1" class="btn btn-primary">Ver detalles</a>
                         </div>
                     </div>
                     <div class="product-content p-4">
-                        <h4 class="product-title"><?php echo $products_texts['product1_name']; ?></h4>
-                        <p class="product-description"><?php echo $products_texts['product1_desc']; ?></p>
-                        <div class="product-features">
-                            <span class="badge bg-light text-dark me-2 mb-2">High Efficiency</span>
-                            <span class="badge bg-light text-dark me-2 mb-2">Temperature Resistant</span>
-                            <span class="badge bg-light text-dark me-2 mb-2">Low Energy</span>
+                        <h4 class="product-title fw-bold mb-2">Luces traseras automotrices</h4>
+                        <p class="product-description text-muted mb-2">Iluminación LED de alta eficiencia y durabilidad para vehículos modernos.</p>
+                        <div class="product-features mb-2">
+                            <span class="badge bg-light text-dark me-2 mb-2">Alta eficiencia</span>
+                            <span class="badge bg-light text-dark me-2 mb-2">Larga vida útil</span>
+                            <span class="badge bg-light text-dark me-2 mb-2">Certificación internacional</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Featured Product 2 -->
+            <!-- Producto 2 -->
             <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="product-card h-100 bg-white rounded shadow overflow-hidden">
-                    <div class="product-image">
-                        <img src="/img/product2.jpg" alt="<?php echo $products_texts['product2_name']; ?>" class="img-fluid w-100">
-                        <div class="product-overlay">
-                            <a href="/product-detail.php?id=2" class="btn btn-primary"><?php echo $products_texts['view_details']; ?></a>
+                    <div class="product-image position-relative" style="background:#f8f9fa; min-height:220px; display:flex; align-items:center; justify-content:center;">
+                        <img src="<?php echo BASE_URL; ?>/img/productos/panel de control lavadora.jpg" alt="Panel de control para lavadora" class="img-fluid" style="max-height:180px; object-fit:contain;">
+                        <div class="product-overlay d-flex align-items-center justify-content-center" style="opacity:0; transition:opacity .3s; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,56,179,0.7);">
+                            <a href="/product-detail.php?id=2" class="btn btn-primary">Ver detalles</a>
                         </div>
                     </div>
                     <div class="product-content p-4">
-                        <h4 class="product-title"><?php echo $products_texts['product2_name']; ?></h4>
-                        <p class="product-description"><?php echo $products_texts['product2_desc']; ?></p>
-                        <div class="product-features">
-                            <span class="badge bg-light text-dark me-2 mb-2">Touch Interface</span>
-                            <span class="badge bg-light text-dark me-2 mb-2">Water Resistant</span>
-                            <span class="badge bg-light text-dark me-2 mb-2">Long Life</span>
+                        <h4 class="product-title fw-bold mb-2">Panel de control para lavadora</h4>
+                        <p class="product-description text-muted mb-2">Panel digital resistente al agua, fácil de usar y con interfaz táctil.</p>
+                        <div class="product-features mb-2">
+                            <span class="badge bg-light text-dark me-2 mb-2">Interfaz táctil</span>
+                            <span class="badge bg-light text-dark me-2 mb-2">Resistente al agua</span>
+                            <span class="badge bg-light text-dark me-2 mb-2">Larga vida útil</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Featured Product 3 -->
+            <!-- Producto 3 -->
             <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="product-card h-100 bg-white rounded shadow overflow-hidden">
-                    <div class="product-image">
-                        <img src="/img/product3.jpg" alt="<?php echo $products_texts['product3_name']; ?>" class="img-fluid w-100">
-                        <div class="product-overlay">
-                            <a href="/product-detail.php?id=3" class="btn btn-primary"><?php echo $products_texts['view_details']; ?></a>
+                    <div class="product-image position-relative" style="background:#f8f9fa; min-height:220px; display:flex; align-items:center; justify-content:center;">
+                        <img src="<?php echo BASE_URL; ?>/img/productos/bomba peristaltica.jpg" alt="Bomba peristáltica industrial" class="img-fluid" style="max-height:180px; object-fit:contain;">
+                        <div class="product-overlay d-flex align-items-center justify-content-center" style="opacity:0; transition:opacity .3s; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,56,179,0.7);">
+                            <a href="/product-detail.php?id=3" class="btn btn-primary">Ver detalles</a>
                         </div>
                     </div>
                     <div class="product-content p-4">
-                        <h4 class="product-title"><?php echo $products_texts['product3_name']; ?></h4>
-                        <p class="product-description"><?php echo $products_texts['product3_desc']; ?></p>
-                        <div class="product-features">
-                            <span class="badge bg-light text-dark me-2 mb-2">Precision</span>
-                            <span class="badge bg-light text-dark me-2 mb-2">Corrosion Resistant</span>
-                            <span class="badge bg-light text-dark me-2 mb-2">Safety Certified</span>
+                        <h4 class="product-title fw-bold mb-2">Bomba peristáltica industrial</h4>
+                        <p class="product-description text-muted mb-2">Solución robusta para manejo de líquidos en procesos industriales.</p>
+                        <div class="product-features mb-2">
+                            <span class="badge bg-light text-dark me-2 mb-2">Precisión</span>
+                            <span class="badge bg-light text-dark me-2 mb-2">Resistente a la corrosión</span>
+                            <span class="badge bg-light text-dark me-2 mb-2">Certificación de seguridad</span>
                         </div>
                     </div>
                 </div>
@@ -151,28 +149,16 @@ $breadcrumbs = [
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="d-block py-2">
-                                    <?php echo $products_texts['category1']; ?>
-                                </a>
+                                <a href="#" class="d-block py-2">Automotriz</a>
                             </li>
                             <li>
-                                <a href="#" class="d-block py-2">
-                                    <?php echo $products_texts['category2']; ?>
-                                </a>
+                                <a href="#" class="d-block py-2">Electrodomésticos</a>
                             </li>
                             <li>
-                                <a href="#" class="d-block py-2">
-                                    <?php echo $products_texts['category3']; ?>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="d-block py-2">
-                                    <?php echo $products_texts['category4']; ?>
-                                </a>
+                                <a href="#" class="d-block py-2">Industrial</a>
                             </li>
                         </ul>
                     </div>
-                    
                     <div class="filter-section bg-white rounded shadow p-4">
                         <h4><?php echo $products_texts['filters_title']; ?></h4>
                         <div class="mb-3">
@@ -187,144 +173,80 @@ $breadcrumbs = [
                     </div>
                 </div>
             </div>
-            
             <!-- Products Grid -->
             <div class="col-lg-9">
                 <div class="row">
-                    <!-- Product 1 -->
+                    <!-- Producto 4 -->
                     <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="product-card h-100 bg-white rounded shadow overflow-hidden">
-                            <div class="product-image">
-                                <img src="/img/product1.jpg" alt="<?php echo $products_texts['product1_name']; ?>" class="img-fluid w-100">
-                                <div class="product-overlay">
-                                    <a href="/product-detail.php?id=1" class="btn btn-primary"><?php echo $products_texts['view_details']; ?></a>
+                            <div class="product-image position-relative" style="background:#f8f9fa; min-height:220px; display:flex; align-items:center; justify-content:center;">
+                                <img src="<?php echo BASE_URL; ?>/img/productos/panel de control lavavajillas.jpg" alt="Panel de control para lavavajillas" class="img-fluid" style="max-height:180px; object-fit:contain;">
+                                <div class="product-overlay d-flex align-items-center justify-content-center" style="opacity:0; transition:opacity .3s; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,56,179,0.7);">
+                                    <a href="/product-detail.php?id=4" class="btn btn-primary">Ver detalles</a>
                                 </div>
                             </div>
                             <div class="product-content p-4">
-                                <h4 class="product-title"><?php echo $products_texts['product1_name']; ?></h4>
-                                <p class="product-description"><?php echo $products_texts['product1_desc']; ?></p>
+                                <h4 class="product-title fw-bold mb-2">Panel de control para lavavajillas</h4>
+                                <p class="product-description text-muted mb-2">Panel resistente y confiable para lavavajillas industriales y domésticos.</p>
                             </div>
                             <div class="product-footer p-4 pt-0 d-flex justify-content-between">
-                                <a href="#" class="text-primary"><i class="fas fa-download me-1"></i> <?php echo $products_texts['download_spec']; ?></a>
-                                <a href="/contact.php?product=1" class="text-primary"><i class="fas fa-envelope me-1"></i> <?php echo $products_texts['request_quote']; ?></a>
+                                <a href="#" class="text-primary"><i class="fas fa-download me-1"></i> Descargar ficha</a>
+                                <a href="/contact.php?product=4" class="text-primary"><i class="fas fa-envelope me-1"></i> Solicitar cotización</a>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Product 2 -->
+                    <!-- Producto 5 -->
                     <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="product-card h-100 bg-white rounded shadow overflow-hidden">
-                            <div class="product-image">
-                                <img src="/img/product2.jpg" alt="<?php echo $products_texts['product2_name']; ?>" class="img-fluid w-100">
-                                <div class="product-overlay">
-                                    <a href="/product-detail.php?id=2" class="btn btn-primary"><?php echo $products_texts['view_details']; ?></a>
+                            <div class="product-image position-relative" style="background:#f8f9fa; min-height:220px; display:flex; align-items:center; justify-content:center;">
+                                <img src="<?php echo BASE_URL; ?>/img/productos/manija del refrigerador.jpg" alt="Manija de refrigerador" class="img-fluid" style="max-height:180px; object-fit:contain;">
+                                <div class="product-overlay d-flex align-items-center justify-content-center" style="opacity:0; transition:opacity .3s; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,56,179,0.7);">
+                                    <a href="/product-detail.php?id=5" class="btn btn-primary">Ver detalles</a>
                                 </div>
                             </div>
                             <div class="product-content p-4">
-                                <h4 class="product-title"><?php echo $products_texts['product2_name']; ?></h4>
-                                <p class="product-description"><?php echo $products_texts['product2_desc']; ?></p>
+                                <h4 class="product-title fw-bold mb-2">Manija de refrigerador</h4>
+                                <p class="product-description text-muted mb-2">Diseño ergonómico y materiales de alta resistencia para uso prolongado.</p>
                             </div>
                             <div class="product-footer p-4 pt-0 d-flex justify-content-between">
-                                <a href="#" class="text-primary"><i class="fas fa-download me-1"></i> <?php echo $products_texts['download_spec']; ?></a>
-                                <a href="/contact.php?product=2" class="text-primary"><i class="fas fa-envelope me-1"></i> <?php echo $products_texts['request_quote']; ?></a>
+                                <a href="#" class="text-primary"><i class="fas fa-download me-1"></i> Descargar ficha</a>
+                                <a href="/contact.php?product=5" class="text-primary"><i class="fas fa-envelope me-1"></i> Solicitar cotización</a>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Product 3 -->
+                    <!-- Producto 6 -->
                     <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
                         <div class="product-card h-100 bg-white rounded shadow overflow-hidden">
-                            <div class="product-image">
-                                <img src="/img/product3.jpg" alt="<?php echo $products_texts['product3_name']; ?>" class="img-fluid w-100">
-                                <div class="product-overlay">
-                                    <a href="/product-detail.php?id=3" class="btn btn-primary"><?php echo $products_texts['view_details']; ?></a>
+                            <div class="product-image position-relative" style="background:#f8f9fa; min-height:220px; display:flex; align-items:center; justify-content:center;">
+                                <img src="<?php echo BASE_URL; ?>/img/productos/rompehielos refrigerador.jpg" alt="Rompehielos para refrigerador" class="img-fluid" style="max-height:180px; object-fit:contain;">
+                                <div class="product-overlay d-flex align-items-center justify-content-center" style="opacity:0; transition:opacity .3s; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,56,179,0.7);">
+                                    <a href="/product-detail.php?id=6" class="btn btn-primary">Ver detalles</a>
                                 </div>
                             </div>
                             <div class="product-content p-4">
-                                <h4 class="product-title"><?php echo $products_texts['product3_name']; ?></h4>
-                                <p class="product-description"><?php echo $products_texts['product3_desc']; ?></p>
+                                <h4 class="product-title fw-bold mb-2">Rompehielos para refrigerador</h4>
+                                <p class="product-description text-muted mb-2">Accesorio esencial para sistemas de refrigeración doméstica y comercial.</p>
                             </div>
                             <div class="product-footer p-4 pt-0 d-flex justify-content-between">
-                                <a href="#" class="text-primary"><i class="fas fa-download me-1"></i> <?php echo $products_texts['download_spec']; ?></a>
-                                <a href="/contact.php?product=3" class="text-primary"><i class="fas fa-envelope me-1"></i> <?php echo $products_texts['request_quote']; ?></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Product 4 -->
-                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="product-card h-100 bg-white rounded shadow overflow-hidden">
-                            <div class="product-image">
-                                <img src="/img/product4.jpg" alt="<?php echo $products_texts['product4_name']; ?>" class="img-fluid w-100">
-                                <div class="product-overlay">
-                                    <a href="/product-detail.php?id=4" class="btn btn-primary"><?php echo $products_texts['view_details']; ?></a>
-                                </div>
-                            </div>
-                            <div class="product-content p-4">
-                                <h4 class="product-title"><?php echo $products_texts['product4_name']; ?></h4>
-                                <p class="product-description"><?php echo $products_texts['product4_desc']; ?></p>
-                            </div>
-                            <div class="product-footer p-4 pt-0 d-flex justify-content-between">
-                                <a href="#" class="text-primary"><i class="fas fa-download me-1"></i> <?php echo $products_texts['download_spec']; ?></a>
-                                <a href="/contact.php?product=4" class="text-primary"><i class="fas fa-envelope me-1"></i> <?php echo $products_texts['request_quote']; ?></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Product 5 -->
-                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="product-card h-100 bg-white rounded shadow overflow-hidden">
-                            <div class="product-image">
-                                <img src="/img/product5.jpg" alt="<?php echo $products_texts['product5_name']; ?>" class="img-fluid w-100">
-                                <div class="product-overlay">
-                                    <a href="/product-detail.php?id=5" class="btn btn-primary"><?php echo $products_texts['view_details']; ?></a>
-                                </div>
-                            </div>
-                            <div class="product-content p-4">
-                                <h4 class="product-title"><?php echo $products_texts['product5_name']; ?></h4>
-                                <p class="product-description"><?php echo $products_texts['product5_desc']; ?></p>
-                            </div>
-                            <div class="product-footer p-4 pt-0 d-flex justify-content-between">
-                                <a href="#" class="text-primary"><i class="fas fa-download me-1"></i> <?php echo $products_texts['download_spec']; ?></a>
-                                <a href="/contact.php?product=5" class="text-primary"><i class="fas fa-envelope me-1"></i> <?php echo $products_texts['request_quote']; ?></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Product 6 -->
-                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="product-card h-100 bg-white rounded shadow overflow-hidden">
-                            <div class="product-image">
-                                <img src="/img/product6.jpg" alt="<?php echo $products_texts['product6_name']; ?>" class="img-fluid w-100">
-                                <div class="product-overlay">
-                                    <a href="/product-detail.php?id=6" class="btn btn-primary"><?php echo $products_texts['view_details']; ?></a>
-                                </div>
-                            </div>
-                            <div class="product-content p-4">
-                                <h4 class="product-title"><?php echo $products_texts['product6_name']; ?></h4>
-                                <p class="product-description"><?php echo $products_texts['product6_desc']; ?></p>
-                            </div>
-                            <div class="product-footer p-4 pt-0 d-flex justify-content-between">
-                                <a href="#" class="text-primary"><i class="fas fa-download me-1"></i> <?php echo $products_texts['download_spec']; ?></a>
-                                <a href="/contact.php?product=6" class="text-primary"><i class="fas fa-envelope me-1"></i> <?php echo $products_texts['request_quote']; ?></a>
+                                <a href="#" class="text-primary"><i class="fas fa-download me-1"></i> Descargar ficha</a>
+                                <a href="/contact.php?product=6" class="text-primary"><i class="fas fa-envelope me-1"></i> Solicitar cotización</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
                 <!-- Pagination -->
                 <div class="row mt-4">
                     <div class="col-12">
                         <nav aria-label="Page navigation">
                             <ul class="pagination justify-content-center">
                                 <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><?php echo $products_texts['previous']; ?></a>
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
                                 </li>
                                 <li class="page-item active"><a class="page-link" href="#">1</a></li>
                                 <li class="page-item"><a class="page-link" href="#">2</a></li>
                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                 <li class="page-item">
-                                    <a class="page-link" href="#"><?php echo $products_texts['next']; ?></a>
+                                    <a class="page-link" href="#">Siguiente</a>
                                 </li>
                             </ul>
                         </nav>
@@ -350,47 +272,53 @@ $breadcrumbs = [
     </div>
 </section>
 
+<style>
+.page-banner .overlay {
+    /* Fondo azul eliminado */
+    background: none;
+}
+.product-card {
+    transition: box-shadow .3s, transform .3s;
+}
+.product-card:hover {
+    box-shadow: 0 8px 32px rgba(0,56,179,0.15);
+    transform: translateY(-6px) scale(1.02);
+}
+.product-image img {
+    transition: transform .3s;
+}
+.product-card:hover .product-image img {
+    transform: scale(1.07);
+}
+.product-overlay {
+    opacity: 0;
+    transition: opacity .3s;
+}
+.product-card:hover .product-overlay {
+    opacity: 1 !important;
+}
+.product-features .badge {
+    font-size: 0.95em;
+    font-weight: 500;
+}
+.pagination .page-link {
+    color: #0038b3;
+    font-weight: 500;
+}
+.pagination .page-item.active .page-link {
+    background: #0038b3;
+    color: #fff;
+    border-color: #0038b3;
+}
+</style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize product filter functionality
-    const categoryLinks = document.querySelectorAll('.category-list li a');
-    const sortBySelect = document.getElementById('sortBy');
-    
-    // Category filter
-    categoryLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Remove active class from all links
-            categoryLinks.forEach(link => {
-                link.parentElement.classList.remove('active');
-            });
-            
-            // Add active class to clicked link
-            this.parentElement.classList.add('active');
-            
-            // Here you would normally filter the products
-            // For now, just show a console message
-            console.log('Filter by category: ' + this.textContent.trim());
-        });
-    });
-    
-    // Sort filter
-    if (sortBySelect) {
-        sortBySelect.addEventListener('change', function() {
-            console.log('Sort by: ' + this.value);
-            // Here you would implement the sorting logic
-        });
-    }
-    
     // Product hover effect
     const productCards = document.querySelectorAll('.product-card');
-    
     productCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.querySelector('.product-overlay').style.opacity = '1';
         });
-        
         card.addEventListener('mouseleave', function() {
             this.querySelector('.product-overlay').style.opacity = '0';
         });

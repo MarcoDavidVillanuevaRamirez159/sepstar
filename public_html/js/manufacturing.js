@@ -21,16 +21,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const duration = 2000; // Duración de la animación en ms
     const startTime = performance.now();
 
-    const easeOutQuad = t => t * (2 - t); // Función de easing para animación más natural
+    const easeOutQuad = (t) => t * (2 - t); // Función de easing para animación más natural
 
     const updateCount = (currentTime) => {
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const easedProgress = easeOutQuad(progress);
-      
+
       count = Math.ceil(target * easedProgress);
       counter.innerText = `${prefix}${count.toLocaleString()}${suffix}`;
-      
+
       if (progress < 1) {
         requestAnimationFrame(updateCount);
       } else {
@@ -42,40 +42,46 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Iniciar contadores cuando sean visibles con IntersectionObserver
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        counterObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
+  const counterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
 
   counters.forEach((counter) => counterObserver.observe(counter));
 
   // Animación de timeline de proceso
-  const processItems = document.querySelectorAll('.process-item');
-  const processObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        setTimeout(() => {
-          const dot = entry.target.querySelector('.process-dot');
-          if (dot) dot.classList.add('active');
-        }, 300);
-        processObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
+  const processItems = document.querySelectorAll(".process-item");
+  const processObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          setTimeout(() => {
+            const dot = entry.target.querySelector(".process-dot");
+            if (dot) dot.classList.add("active");
+          }, 300);
+          processObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
 
-  processItems.forEach(item => processObserver.observe(item));
+  processItems.forEach((item) => processObserver.observe(item));
 
   // Galería de instalaciones con lightbox
-  const galleryItems = document.querySelectorAll('.facility-gallery-item');
-  galleryItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const imgSrc = item.querySelector('img').src;
-      const lightbox = document.createElement('div');
+  const galleryItems = document.querySelectorAll(".facility-gallery-item");
+  galleryItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const imgSrc = item.querySelector("img").src;
+      const lightbox = document.createElement("div");
       lightbox.innerHTML = `
         <div class="lightbox-overlay">
           <div class="lightbox-container">
@@ -85,23 +91,28 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
       document.body.appendChild(lightbox);
-      
+
       // Prevenir scroll
-      document.body.style.overflow = 'hidden';
-      
+      document.body.style.overflow = "hidden";
+
       // Animar apertura
       setTimeout(() => {
-        lightbox.querySelector('.lightbox-overlay').style.opacity = '1';
-        lightbox.querySelector('.lightbox-container').style.transform = 'scale(1)';
+        lightbox.querySelector(".lightbox-overlay").style.opacity = "1";
+        lightbox.querySelector(".lightbox-container").style.transform =
+          "scale(1)";
       }, 10);
-      
+
       // Cerrar lightbox
-      lightbox.addEventListener('click', (e) => {
-        if (e.target.classList.contains('lightbox-overlay') || e.target.classList.contains('lightbox-close')) {
-          lightbox.querySelector('.lightbox-overlay').style.opacity = '0';
-          lightbox.querySelector('.lightbox-container').style.transform = 'scale(0.9)';
-          document.body.style.overflow = '';
-          
+      lightbox.addEventListener("click", (e) => {
+        if (
+          e.target.classList.contains("lightbox-overlay") ||
+          e.target.classList.contains("lightbox-close")
+        ) {
+          lightbox.querySelector(".lightbox-overlay").style.opacity = "0";
+          lightbox.querySelector(".lightbox-container").style.transform =
+            "scale(0.9)";
+          document.body.style.overflow = "";
+
           setTimeout(() => {
             document.body.removeChild(lightbox);
           }, 300);
@@ -113,23 +124,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // Parallax en el hero mejorado con requestAnimationFrame para mejor rendimiento
   let ticking = false;
   let lastScrollY = window.pageYOffset;
-  const parallaxElements = document.querySelectorAll('.parallax');
-  
+  const parallaxElements = document.querySelectorAll(".parallax");
+
   const updateParallax = () => {
     const scrolled = window.pageYOffset;
-    
+
     // Parallax hero
     const heroVideo = document.querySelector(".hero-video");
     if (heroVideo) {
       heroVideo.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
-    
+
     // Parallax para otros elementos
-    parallaxElements.forEach(el => {
+    parallaxElements.forEach((el) => {
       const speed = el.dataset.speed || 0.2;
       el.style.transform = `translateY(${scrolled * speed}px)`;
     });
-    
+
     ticking = false;
   };
 
@@ -145,29 +156,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Inicializar modal de video para que cargue correctamente
-  const videoModal = document.getElementById('factoryVideoModal');
-  const videoFrame = document.getElementById('factoryVideoFrame');
-    
+  const videoModal = document.getElementById("factoryVideoModal");
+  const videoFrame = document.getElementById("factoryVideoFrame");
+
   if (videoModal && videoFrame) {
-    videoModal.addEventListener('show.bs.modal', function () {
-      const videoUrl = videoFrame.getAttribute('data-video-url');
-      videoFrame.setAttribute('src', videoUrl + "?autoplay=1");
+    videoModal.addEventListener("show.bs.modal", function () {
+      const videoUrl = videoFrame.getAttribute("data-video-url");
+      videoFrame.setAttribute("src", videoUrl + "?autoplay=1");
     });
-        
-    videoModal.addEventListener('hidden.bs.modal', function () {
-      videoFrame.setAttribute('src', 'about:blank');
+
+    videoModal.addEventListener("hidden.bs.modal", function () {
+      videoFrame.setAttribute("src", "about:blank");
     });
   }
 
   // Animación para certificaciones
-  const certItems = document.querySelectorAll('.certification-item');
+  const certItems = document.querySelectorAll(".certification-item");
   certItems.forEach((item, index) => {
     item.style.animationDelay = `${index * 0.1}s`;
   });
-  
+
   // Inicializar tooltip de Bootstrap
   const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-  tooltips.forEach(tooltip => {
+  tooltips.forEach((tooltip) => {
     new bootstrap.Tooltip(tooltip);
   });
 });

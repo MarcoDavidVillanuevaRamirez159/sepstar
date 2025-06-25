@@ -50,7 +50,7 @@ $header_texts = load_language_file('header');
     {
       "@context": "https://schema.org",      "@type": "Organization",      "name": "Sepstar México",
       "url": "<?php echo SITE_URL; ?>",
-      "logo": "<?php echo SITE_URL; ?>/img/logo/LOGONEGRO.png",
+      "logo": "<?php echo SITE_URL; ?>/img/logo/logo sepstar.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+86-756-3390011",
@@ -205,3 +205,19 @@ $header_texts = load_language_file('header');
 
     <!-- Main Content -->
     <main class="main-content">
+
+    <!-- Icono de carga -->
+    <div id="loading-icon" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);">
+        <img src="/img/loading-star-orange.gif" alt="Cargando...">
+    </div>
+
+    <script>
+        document.onreadystatechange = function () {
+            const loadingIcon = document.getElementById('loading-icon');
+            if (document.readyState === 'loading') {
+                loadingIcon.style.display = 'block';
+            } else {
+                loadingIcon.style.display = 'none';
+            }
+        };
+    </script>

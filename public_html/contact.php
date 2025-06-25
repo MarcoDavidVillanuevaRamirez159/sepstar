@@ -295,6 +295,25 @@ $csrf_token = generate_csrf_token();
     }
 </style>
 
+<script>
+    function initMap() {
+        const mapOptions = {
+            center: { lat: 25.686614, lng: -100.316113 }, // Coordenadas de Monterrey, México
+            zoom: 15,
+        };
+
+        const map = new google.maps.Map(document.getElementById('contactMap'), mapOptions);
+
+        const marker = new google.maps.Marker({
+            position: mapOptions.center,
+            map: map,
+            title: 'Sepstar México',
+        });
+    }
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+
 <?php
     // Completar el bloque try iniciado al principio
 } catch (Exception $e) {

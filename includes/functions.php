@@ -1,4 +1,7 @@
 <?php
+// Este archivo contiene funciones auxiliares para el proyecto.
+// Se recomienda mantener aquí la lógica reutilizable.
+
 // Incluir configuración
 require_once __DIR__ . '/config.php';
 
@@ -70,13 +73,13 @@ function load_language_file($section) {
 }
 
 // Función para generar la URL con idioma
-function lang_url($url, $lang = null) {
-    if ($lang === null) {
-        $lang = get_current_language();
-    }
-    
-    $separator = (strpos($url, '?') !== false) ? '&' : '?';
-    return $url . $separator . 'lang=' . $lang;
+function lang_url($url, $lang) {
+    $parsed_url = parse_url($url);
+    $query = isset($parsed_url['query']) ? $parsed_url['query'] : '';
+    parse_str($query, $params);
+    $params['lang'] = $lang;
+    $parsed_url['query'] = http_build_query($params);
+    return $parsed_url['path'] . '?' . $parsed_url['query'];
 }
 
 // Función para mostrar un mensaje

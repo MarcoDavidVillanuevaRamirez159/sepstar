@@ -32,7 +32,7 @@ $breadcrumbs = [
 ?>
 
 <!-- Page Banner -->
-<section class="page-banner" style="background-image: url('<?php echo BASE_URL; ?>/img/fotos de fabrica y opengraph/fabrica 2.jpg');">
+<section class="page-banner" style="background-image: url('<?php echo BASE_URL; ?>/img/fotos de fabrica y opengraph/fabrica 1.jpg');">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-lg-6">
@@ -51,7 +51,7 @@ $breadcrumbs = [
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
                 <div class="about-image position-relative">
-                    <img src="/img/about-company.jpg" alt="<?php echo SITE_NAME; ?>" class="img-fluid rounded shadow">
+                    <img src="<?php echo BASE_URL; ?>/img/fotos de fabrica y opengraph/fabrica 1.jpg" alt="Fábrica Sepstar" class="img-fluid rounded shadow">
                     <div class="about-experience">
                         <span>10+</span>
                         <span><?php echo $about_texts['years_exp']; ?></span>
@@ -215,14 +215,10 @@ $breadcrumbs = [
         
         <div class="row">
             <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="/img/team-1.jpg" alt="<?php echo $about_texts['team_member_1_name']; ?>">
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
+                <div class="team-card text-center">
+                    <div class="team-image d-flex justify-content-center align-items-center" style="height: 120px;">
+                        <i class="fas fa-user-tie fa-5x text-primary"></i>
+                        <div class="team-social d-none"></div>
                     </div>
                     <div class="team-content">
                         <h3><?php echo $about_texts['team_member_1_name']; ?></h3>
@@ -230,16 +226,11 @@ $breadcrumbs = [
                     </div>
                 </div>
             </div>
-            
             <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="/img/team-2.jpg" alt="<?php echo $about_texts['team_member_2_name']; ?>">
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
+                <div class="team-card text-center">
+                    <div class="team-image d-flex justify-content-center align-items-center" style="height: 120px;">
+                        <i class="fas fa-user-tie fa-5x text-primary"></i>
+                        <div class="team-social d-none"></div>
                     </div>
                     <div class="team-content">
                         <h3><?php echo $about_texts['team_member_2_name']; ?></h3>
@@ -247,16 +238,11 @@ $breadcrumbs = [
                     </div>
                 </div>
             </div>
-            
             <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="/img/team-3.jpg" alt="<?php echo $about_texts['team_member_3_name']; ?>">
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
+                <div class="team-card text-center">
+                    <div class="team-image d-flex justify-content-center align-items-center" style="height: 120px;">
+                        <i class="fas fa-user-tie fa-5x text-primary"></i>
+                        <div class="team-social d-none"></div>
                     </div>
                     <div class="team-content">
                         <h3><?php echo $about_texts['team_member_3_name']; ?></h3>
@@ -264,16 +250,11 @@ $breadcrumbs = [
                     </div>
                 </div>
             </div>
-            
             <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="/img/team-4.jpg" alt="<?php echo $about_texts['team_member_4_name']; ?>">
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
+                <div class="team-card text-center">
+                    <div class="team-image d-flex justify-content-center align-items-center" style="height: 120px;">
+                        <i class="fas fa-user-tie fa-5x text-primary"></i>
+                        <div class="team-social d-none"></div>
                     </div>
                     <div class="team-content">
                         <h3><?php echo $about_texts['team_member_4_name']; ?></h3>
@@ -287,48 +268,72 @@ $breadcrumbs = [
 
 <!-- Certifications Section -->
 <section class="certifications-section py-5">
-    <div class="container py-4">
-        <div class="section-title mb-5" data-aos="fade-up">
-            <h2><?php echo $about_texts['certifications_title']; ?></h2>
+    <div class="container py-5">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                <span class="badge bg-primary text-white px-3 py-2 mb-3">Garantía de Calidad</span>
+                <h2 class="section-title display-4 fw-bold mb-4"><?php echo $about_texts['certifications_title']; ?></h2>
+                <p class="lead"><?php echo $about_texts['certifications_subtitle']; ?></p>
+            </div>
         </div>
-        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-            <?php echo $about_texts['certifications_subtitle']; ?>
-        </p>
-        
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="certification-card">
-                    <div class="certification-image">
-                        <img src="/img/certification-1.png" alt="<?php echo $about_texts['certification_1_name']; ?>" class="img-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="certification-item text-center h-100 p-4 bg-white rounded-3 shadow">
+                    <div class="cert-icon-wrap mb-4 mx-auto d-flex align-items-center justify-content-center">
+                        <img src="<?php echo BASE_URL; ?>/img/certificados/certificado de wuhu sepstar iatf16949.jpg" alt="Certificado IATF 16949 - Wuhu Sepstar" class="certification-logo">
                     </div>
-                    <div class="certification-content">
-                        <h3><?php echo $about_texts['certification_1_name']; ?></h3>
-                        <p><?php echo $about_texts['certification_1_desc']; ?></p>
-                    </div>
+                    <h5 class="mb-3">Certificado IATF 16949 - Wuhu Sepstar</h5>
+                    <p class="cert-desc mb-0 text-muted small">Certificación internacional específica para la industria automotriz</p>
                 </div>
             </div>
-            
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="certification-card">
-                    <div class="certification-image">
-                        <img src="/img/certification-2.png" alt="<?php echo $about_texts['certification_2_name']; ?>" class="img-fluid">
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="certification-item text-center h-100 p-4 bg-white rounded-3 shadow">
+                    <div class="cert-icon-wrap mb-4 mx-auto d-flex align-items-center justify-content-center">
+                        <img src="<?php echo BASE_URL; ?>/img/certificados/certificado nacional de la empreasa cientifica.png" alt="Certificado Nacional de Empresa Científica" class="certification-logo">
                     </div>
-                    <div class="certification-content">
-                        <h3><?php echo $about_texts['certification_2_name']; ?></h3>
-                        <p><?php echo $about_texts['certification_2_desc']; ?></p>
-                    </div>
+                    <h5 class="mb-3">Certificado Nacional de Empresa Científica</h5>
+                    <p class="cert-desc mb-0 text-muted small">Reconocimiento nacional por innovación y desarrollo científico</p>
                 </div>
             </div>
-            
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="certification-card">
-                    <div class="certification-image">
-                        <img src="/img/certification-3.png" alt="<?php echo $about_texts['certification_3_name']; ?>" class="img-fluid">
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="certification-item text-center h-100 p-4 bg-white rounded-3 shadow">
+                    <div class="cert-icon-wrap mb-4 mx-auto d-flex align-items-center justify-content-center">
+                        <img src="<?php echo BASE_URL; ?>/img/certificados/certificado zhuhai iatf16949.jpg" alt="Certificado IATF 16949 - Zhuhai Sepstar" class="certification-logo">
                     </div>
-                    <div class="certification-content">
-                        <h3><?php echo $about_texts['certification_3_name']; ?></h3>
-                        <p><?php echo $about_texts['certification_3_desc']; ?></p>
+                    <h5 class="mb-3">Certificado IATF 16949 - Zhuhai Sepstar</h5>
+                    <p class="cert-desc mb-0 text-muted small">Certificación internacional específica para la industria automotriz</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="certification-item text-center h-100 p-4 bg-white rounded-3 shadow">
+                    <div class="cert-icon-wrap mb-4 mx-auto d-flex align-items-center justify-content-center">
+                        <img src="<?php echo BASE_URL; ?>/img/certificados/medium enterprises certificate.jpg" alt="Certificado de Empresa de Mediana Escala" class="certification-logo">
                     </div>
+                    <h5 class="mb-3">Certificado de Empresa de Mediana Escala</h5>
+                    <p class="cert-desc mb-0 text-muted small">Reconocimiento oficial como empresa de mediana escala de alta calidad</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="certification-banner p-5 bg-white rounded-3 shadow position-relative overflow-hidden" data-aos="fade-up">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7 position-relative z-index-1">
+                            <h3 class="display-6 mb-4">Comprometidos con la excelencia y calidad</h3>
+                            <p class="lead mb-4">Nuestras certificaciones respaldan nuestro compromiso con los más altos estándares en procesos de fabricación.</p>
+                            <div class="d-flex flex-wrap cert-banner-logos">
+                                <img src="<?php echo BASE_URL; ?>/img/certificados/certificado de empresa de alta tecnologia.jpg" alt="Certificado de Empresa de Alta Tecnología" class="me-4 mb-3 cert-banner-logo">
+                                <img src="<?php echo BASE_URL; ?>/img/certificados/certificado de empresa de alta tecnologia2.jpg" alt="Certificado de Empresa de Alta Tecnología 2" class="me-4 mb-3 cert-banner-logo">
+                                <img src="<?php echo BASE_URL; ?>/img/certificados/certificado nacional de la empreasa cientifica.png" alt="Certificado Nacional de Empresa Científica" class="me-4 mb-3 cert-banner-logo">
+                            </div>
+                        </div>
+                        <div class="col-lg-5 d-none d-lg-block">
+                            <div class="cert-banner-image">
+                                <img src="<?php echo BASE_URL; ?>/img/equipo de trabajo o manufactura/equipo de trabajo 1.jpg" alt="Equipo de trabajo" class="img-fluid rounded-3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-banner-bg"></div>
                 </div>
             </div>
         </div>
@@ -394,6 +399,12 @@ $breadcrumbs = [
         padding: 2rem;
         box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        padding-top: 2.5rem;
     }
     
     .mvv-card:hover {
@@ -408,18 +419,21 @@ $breadcrumbs = [
         text-align: center;
         border-radius: 50%;
         background-color: rgba(0,86,179,0.1);
-        margin: 0 auto;
-        transition: all 0.3s ease;
-    }
-    
-    .mvv-card:hover .mvv-icon {
-        background-color: var(--primary-color);
-        color: #fff;
+        margin: 0 auto 1rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
     }
     
     .mvv-title {
         margin-bottom: 1rem;
         font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .mvv-desc {
+        text-align: center;
     }
     
     .timeline {
@@ -549,6 +563,25 @@ $breadcrumbs = [
     .certification-content h3 {
         font-size: 1.25rem;
         margin-bottom: 1rem;
+    }
+    
+    .certification-logo {
+        max-width: 120px;
+        max-height: 90px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block;
+    }
+    .cert-banner-logo {
+        max-width: 90px;
+        max-height: 60px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        margin: 0 10px 10px 0;
+        display: inline-block;
     }
 </style>
 

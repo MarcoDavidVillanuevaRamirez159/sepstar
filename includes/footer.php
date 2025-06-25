@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">                    <div class="footer-about">
                         <a href="<?php echo BASE_URL; ?>/">
-                            <img src="<?php echo BASE_URL; ?>/img/logo/LOGONEGRO.png" alt="<?php echo SITE_NAME; ?>" class="footer-logo mb-3">
+                            <img src="<?php echo BASE_URL; ?>/img/logo/logo sepstar.png" alt="<?php echo SITE_NAME; ?>" class="footer-logo mb-3">
                         </a>
                         <p>Sepstar México S DE RL DE CV se adherirá al principio de proporcionar a los clientes productos y servicios de alta calidad y alto valor añadido, y se esforzará por alcanzar la excelencia para ofrecer servicios oportunos y eficientes.</p>
                         <div class="social-icons mt-3">
@@ -68,22 +68,7 @@
                             <li><a href="<?php echo BASE_URL; ?>/sitemap.php">Mapa del Sitio</a></li>
                         </ul>
                     </div>
-                </div>
-            </div>        </div>
-        
-        <!-- Copyright Footer -->
-        <div class="footer-copyright py-3 mt-4 border-top border-secondary">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-start">
-                        <p class="mb-0">&copy; <?php echo date('Y'); ?> Sepstar México. Todos los derechos reservados.</p>
-                    </div>                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                        <div class="footer-logo-container">
-                            <img src="<?php echo BASE_URL; ?>/img/logo/logo sepstar.png" alt="Sepstar Logo" class="footer-bottom-logo">
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </div>            </div>
         </div>
     </footer>
 

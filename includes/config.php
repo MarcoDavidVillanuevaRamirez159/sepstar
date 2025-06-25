@@ -1,4 +1,7 @@
 <?php
+// Este archivo contiene la configuración general del proyecto.
+// Se recomienda mantener aquí las constantes y variables globales.
+
 // Activar reporte de errores para desarrollo
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
