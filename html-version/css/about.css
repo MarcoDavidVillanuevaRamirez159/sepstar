@@ -1,0 +1,164 @@
+/* Estilos globales - Orange Theme */
+:root {
+  --primary-color: #ff6600;
+  --secondary-color: #ff8c00;
+  --dark-color: #343a40;
+  --light-color: #f8f9fa;
+  --text-color: #333;
+  --text-light: #6c757d;
+  --border-color: #dee2e6;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+
+  /* Orange Theme Colors */
+  --orange-primary: #ff6600;
+  --orange-secondary: #ff8c00;
+  --orange-light: #ffa500;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--dark-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Estilos del encabezado */
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  padding: 15px 0;
+  background-color: transparent;
+}
+
+.header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  will-change: opacity;
+}
+
+.header.scrolled:before {
+  opacity: 1;
+}
+
+.header.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+.logo {
+  position: relative;
+}
+
+.white-logo,
+.black-logo {
+  max-height: 65px;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: opacity;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.white-logo {
+  opacity: 1;
+  z-index: 2;
+  visibility: visible;
+}
+
+.black-logo {
+  opacity: 0;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.header.scrolled .white-logo {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header.scrolled .black-logo {
+  opacity: 1;
+  visibility: visible;
+}
+
+.logo {
+  position: relative;
+  height: 65px;
+  width: 180px;
+  display: block;
+  overflow: hidden;
+}
+
+.logo a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-nav .nav-link {
+  padding: 0.7rem 1.2rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.header.scrolled .navbar-nav .nav-link {
+  color: var(--dark-color);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item.active .nav-link {
+  color: var(--orange-primary);
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.language-selector a {
+  color: #fff;
+  margin: 0 0.25rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header.scrolled .language-selector a {
+  color: var(--dark-color);
+}
+
+.language-selector a.active {
+  color: var(--orange-primary);
+}
+
+.language-selector .separator {
+  color: #fff;
+  margin: 0 0.2rem;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header.scrolled .language-selector .separator {
+  color: var(--dark-color);
+}

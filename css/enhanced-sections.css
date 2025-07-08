@@ -1,0 +1,87 @@
+/* Enhanced Services Section */
+.services-section {
+  padding: 60px 0;
+}
+.services-section .section-header {
+  margin-bottom: 40px;
+}
+.services-section .service-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.services-section .service-card:hover {
+  transform: scale(1.05);
+}
+.services-section .service-card img {
+  width: 100%;
+  height: auto;
+}
+.services-section .service-card-body {
+  padding: 20px;
+}
+
+/* Enhanced Video Section */
+.video-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+.video-section .video-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Enhanced Team Section */
+.team-section {
+  padding: 60px 0;
+}
+.team-section .team-card {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.team-section .team-card:hover {
+  transform: scale(1.05);
+}
+.team-section .team-card img {
+  width: 100%;
+  height: auto;
+}
+.team-section .team-card-body {
+  padding: 20px;
+}
+
+/* Enhanced Counter Section */
+.counter-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+.counter-section .counter-box {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.counter-section .counter-box:hover {
+  transform: scale(1.05);
+}
+.counter-section .counter-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.counter-section .counter-number {
+  font-size: 36px;
+  font-weight: bold;
+}
+.counter-section .counter-label {
+  font-size: 18px;
+  font-weight: 600;
+}
+.counter-section .counter-description {
+  font-size: 14px;
+  color: #666;
+}

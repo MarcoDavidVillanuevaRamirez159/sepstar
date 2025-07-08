@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuestros Productos - Sepstar México</title>
+    <meta
+      name="description"
+      content="Descubra nuestra amplia gama de productos fabricados con los más altos estándares de calidad para las industrias automotriz y de electrodomésticos."
+    />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/components.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="img/logo%20y%20favicon/favicon_sepstar.ico"
+      type="image/x-icon"
+    />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Google Fonts - Montserrat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="logo">
+              <a href="index.html">
+                <img
+                  src="img/logo/logo sepstar.png"
+                  alt="Sepstar México"
+                  class="white-logo img-fluid"
+                />
+                <img
+                  src="img/logo/LOGONEGRO.png"
+                  alt="Sepstar México"
+                  class="black-logo img-fluid"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="col-6 col-md-8 col-lg-9">
+            <nav class="navbar navbar-expand-lg">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMain"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">Sobre Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="manufacturing.html"
+                      >Fabricación</a
+                    >
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="products.html">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="news.html">Noticias</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contacto</a>
+                  </li>
+                </ul>
+                <div class="language-selector">
+                  <a href="#" class="active">ES</a>
+                  <span class="separator">|</span>
+                  <a href="#">EN</a>
+                  <span class="separator">|</span>
+                  <a href="#">中文</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Precargar las imágenes del logo para evitar parpadeos
+        const whiteLogoImg = new Image();
+        whiteLogoImg.src = "img/logo/logo sepstar.png";
+        const blackLogoImg = new Image();
+        blackLogoImg.src = "img/logo/LOGONEGRO.png";
+
+        // Efecto de encabezado al desplazarse
+        const handleHeaderScroll = function () {
+          const header = document.querySelector(".header");
+          if (window.scrollY > 100) {
+            if (!header.classList.contains("scrolled")) {
+              // Aplicar la clase con un pequeño retraso para asegurar que todas las transiciones sean fluidas
+              requestAnimationFrame(() => {
+                header.classList.add("scrolled");
+              });
+            }
+          } else {
+            if (header.classList.contains("scrolled")) {
+              requestAnimationFrame(() => {
+                header.classList.remove("scrolled");
+              });
+            }
+          }
+        };
+
+        // Verificar el estado del scroll al cargar la página
+        handleHeaderScroll();
+
+        // Escuchar el evento de scroll con throttling para mejor rendimiento
+        let lastScrollTime = 0;
+        window.addEventListener(
+          "scroll",
+          function () {
+            const now = Date.now();
+            if (now - lastScrollTime > 10) {
+              // 10ms throttle
+              lastScrollTime = now;
+              handleHeaderScroll();
+            }
+          },
+          { passive: true }
+        );
+
+        // Initialize Mobile Star Menu
+        initMobileStarMenu();
+      });
+
+      /**
+       * Initialize Mobile Star Menu functionality
+       */
+      function initMobileStarMenu() {
+        const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+        const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+        const mobileMenuClose = document.getElementById("mobileMenuClose");
+        const body = document.body;
+
+        if (!mobileMenuToggle || !mobileMenuOverlay || !mobileMenuClose) {
+          return;
+        }
+
+        // Open mobile menu
+        mobileMenuToggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // Add active classes
+          mobileMenuToggle.classList.add("active");
+          mobileMenuOverlay.classList.add("active");
+          body.classList.add("mobile-menu-open");
+
+          // Trigger animations after a small delay
+          setTimeout(() => {
+            const menuItems = mobileMenuOverlay.querySelectorAll(
+              ".mobile-menu-nav li"
+            );
+            menuItems.forEach((item, index) => {
+              item.style.animationDelay = `${0.3 + index * 0.1}s`;
+            });
+          }, 100);
+        });
+
+        // Close mobile menu
+        function closeMobileMenu() {
+          mobileMenuToggle.classList.remove("active");
+          mobileMenuOverlay.classList.remove("active");
+          body.classList.remove("mobile-menu-open");
+
+          // Reset animations
+          const animatedElements = mobileMenuOverlay.querySelectorAll(
+            '[style*="animation-delay"]'
+          );
+          animatedElements.forEach((element) => {
+            element.style.animationDelay = "";
+          });
+        }
+
+        // Close button click
+        mobileMenuClose.addEventListener("click", closeMobileMenu);
+
+        // Close when clicking on overlay background
+        mobileMenuOverlay.addEventListener("click", function (e) {
+          if (e.target === mobileMenuOverlay) {
+            closeMobileMenu();
+          }
+        });
+
+        // Close with Escape key
+        document.addEventListener("keydown", function (e) {
+          if (
+            e.key === "Escape" &&
+            mobileMenuOverlay.classList.contains("active")
+          ) {
+            closeMobileMenu();
+          }
+        });
+
+        // Handle menu item clicks
+        const mobileMenuLinks =
+          mobileMenuOverlay.querySelectorAll(".mobile-menu-nav a");
+        mobileMenuLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            // Remove active class from all links
+            mobileMenuLinks.forEach((l) => l.classList.remove("active"));
+            // Add active class to clicked link
+            this.classList.add("active");
+
+            // Close menu after a short delay
+            setTimeout(closeMobileMenu, 300);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

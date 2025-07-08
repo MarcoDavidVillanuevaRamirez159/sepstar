@@ -1,0 +1,13 @@
+.hero-section {
+  background: url(/html-version/img/ChatGPT\ Image\ 6\ jul\ 2025\,\ 12_19_23\ a.m..png);
+  position: relative; /* ¡Fundamental para que el video absoluto se posicione correctamente! */
+  width: 100%;
+  padding-bottom: 120px; /* Espacio para el video */
+  padding-top: 12px;
+  min-height: 100vh; /* Ajusta la altura de tu sección como necesites */
+  overflow: hidden; /* Recorta cualquier parte del video que sobresalga */
+  /* ... otros estilos que ya tengas para hero-section ... */
+  display: flex; /* Para centrar el hero-content */
+  align-items: center;
+  justify-content: center;
+}

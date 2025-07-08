@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <title>Sobre Nosotros - Sepstar México</title>
+    <meta
+      name="description"
+      content="Conozca a Sepstar México, fabricante líder de componentes OEM y ODM para las industrias automotriz y de electrodomésticos en América del Norte."
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="img/logo%20y%20favicon/favicon_sepstar.ico"
+      type="image/x-icon"
+    />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Google Fonts - Montserrat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style></style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="logo">
+              <a href="index.html">
+                <img
+                  src="img/logo/logo sepstar.png"
+                  alt="Sepstar México"
+                  class="white-logo img-fluid"
+                />
+                <img
+                  src="img/logo/LOGONEGRO.png"
+                  alt="Sepstar México"
+                  class="black-logo img-fluid"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="col-6 col-md-8 col-lg-9">
+            <nav class="navbar navbar-expand-lg">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMain"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="about.html">Sobre Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="manufacturing.html"
+                      >Fabricación</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="products.html">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="news.html">Noticias</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contacto</a>
+                  </li>
+                </ul>
+                <div class="language-selector">
+                  <a href="#" class="active">ES</a>
+                  <span class="separator">|</span>
+                  <a href="#">EN</a>
+                  <span class="separator">|</span>
+                  <a href="#">中文</a>
+                </div>
+              </div>
+
+              <!-- Mobile Menu Toggle - Star Button -->
+              <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <div class="star-button">
+                  <img
+                    src="img/estrella.png"
+                    alt="Menu"
+                    class="star-icon"
+                    onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=&quot;color:white;font-size:18px;&quot;>☰</span>';"
+                  />
+                </div>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu-container">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="mobile-menu-logo">
+          <img
+            src="img/logo/LOGONEGRO - Editadosinfondo.png"
+            alt="Sepstar México"
+          />
+        </div>
+
+        <ul class="mobile-menu-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html" class="active">Sobre Nosotros</a></li>
+          <li><a href="manufacturing.html">Fabricación</a></li>
+          <li><a href="products.html">Productos</a></li>
+          <li><a href="news.html">Noticias</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+
+        <div class="mobile-language-selector">
+          <a href="#" class="active">ES</a>
+          <a href="#">EN</a>
+          <a href="#">中文</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Swiper JavaScript -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
+</html>

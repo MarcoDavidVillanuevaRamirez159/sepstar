@@ -1,0 +1,179 @@
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 20px;
+    top: 5px;
+    z-index: 1002;
+  }
+
+  /* Ocultar el menú bootstrap en móviles */
+  .navbar-collapse {
+    display: none !important;
+  }
+
+  .navbar-toggler {
+    display: none !important;
+  }
+
+  /* Logo más pequeño en móviles */
+  .logo {
+    height: 45px !important;
+    width: 140px !important;
+  }
+
+  .white-logo,
+  .black-logo {
+    max-height: 45px !important;
+  }
+
+  /* Ajustar padding del header en móviles */
+  .header {
+    padding: 10px 0 !important;
+  }
+
+  .header.scrolled {
+    padding: 8px 0 !important;
+  }
+
+  /* Asegurar que el header no interfiera */
+  .header .container {
+    position: relative;
+  }
+
+  .header .row {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* El logo debe estar en su posición normal */
+  .col-6.col-md-4.col-lg-3 {
+    z-index: 1;
+  }
+
+  /* La columna del menú debe estar limpia */
+  .col-6.col-md-8.col-lg-9 {
+    position: relative;
+  }
+}
+
+/* Mostrar menú normal en desktop */
+@media (min-width: 769px) {
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+}
+
+.star-button {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(
+    135deg,
+    var(--orange-primary),
+    var(--orange-secondary)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.star-button:hover {
+  background: linear-gradient(
+    135deg,
+    var(--orange-secondary),
+    var(--orange-light)
+  );
+  transform: scale(1.1);
+}
+
+.star-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+  filter: brightness(0) invert(1);
+}
+
+/* Si la imagen no se carga, mostrar tres líneas */
+.star-icon::before {
+  content: "☰";
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.star-icon:not([src]) {
+  display: none;
+}
+
+.star-icon:not([src])::before {
+  display: block;
+}
+
+/* Animación de rotación al hover */
+.mobile-menu-toggle:hover .star-icon {
+  transform: rotate(72deg) scale(1.1);
+}
+
+/* Animación cuando el menú está activo */
+.mobile-menu-toggle.active .star-icon {
+  transform: rotate(144deg) scale(0.9);
+}
+
+.mobile-menu-toggle.active .star-button {
+  background: linear-gradient(
+    135deg,
+    var(--orange-light),
+    var(--orange-secondary)
+  );
+  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
+  transform: scale(1.05);
+}
+
+/* OVERLAY DEL MENÚ MÓVIL */
+.mobile-menu-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.98)
+  ) !important;
+  backdrop-filter: blur(10px);
+  z-index: 999999 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}

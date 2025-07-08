@@ -1,0 +1,81 @@
+/* === Animaciones Globales con AOS === */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity, filter;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+/* === Home Section === */
+[data-aos="home-text"] {
+  transform: translateY(60px);
+  filter: blur(20px);
+}
+[data-aos="home-image"] {
+  transform: translateY(60px);
+  filter: blur(20px);
+}
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* === Carrusel === */
+[data-aos="carousel-slide"] {
+  transform: scale(0.95) translateY(80px);
+  filter: blur(20px);
+}
+[data-aos="carousel-text"] {
+  transform: translateY(40px);
+  filter: blur(10px);
+}
+
+/* === Swiper === */
+[data-aos="swiper-fade"] {
+  transform: scale(0.98);
+  filter: blur(10px);
+}
+
+/* === Info Section === */
+[data-aos="info-text"] {
+  transform: translateX(-60px);
+  filter: blur(12px);
+}
+[data-aos="info-image"] {
+  transform: translateX(60px);
+  filter: blur(12px);
+}
+
+/* === Creative Cards === */
+[data-aos="creative-card"] {
+  transform: scale(0.85) translateY(50px);
+  filter: blur(15px);
+}
+
+/* === Blur de transición entre secciones === */
+.section-transition::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  opacity: 0;
+  animation: sectionBlurIn 1s ease forwards;
+  z-index: 10;
+}
+
+@keyframes sectionBlurIn {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

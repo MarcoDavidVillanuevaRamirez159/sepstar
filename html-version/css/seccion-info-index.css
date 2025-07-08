@@ -1,0 +1,240 @@
+/* --- NUEVA SECCIÓN: Estilos de Información General --- */
+
+.info-section {
+  background-color: #fff;
+  width: 100vw;
+  min-height: 70vh; /* Altura adecuada para una sección de información */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0; /* Espaciado interno */
+  position: relative;
+  overflow: hidden;
+  margin-top: 50px; /* Un espacio entre la sección anterior y esta, si la hay */
+  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombra interna sutil */
+}
+
+.info-container {
+  display: flex;
+  flex-direction: row; /* Imagen y texto lado a lado por defecto */
+  align-items: center;
+  gap: 70px; /* Espacio entre los bloques de contenido */
+  max-width: 1200px;
+  width: 90%;
+  padding: 20px 40px; /* Padding interno */
+
+  /* --- ANIMACIÓN INICIAL: El contenedor completo entra suavemente --- */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.info-content-text {
+  flex: 1; /* Permite que el texto ocupe el espacio disponible */
+  display: flex;
+  font-family: "Oswald";
+  flex-direction: column;
+  align-items: flex-start;
+  color: #000000;
+}
+
+.info-heading {
+  font-size: 2.8rem;
+  color: #000000; /* Un color oscuro y profesional */
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-family: "Libertinus Math";
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+
+  /* --- Animación inicial para el título --- */
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(5px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out,
+    filter 0.8s ease-out;
+}
+
+.info-paragraph {
+  font-size: 1.1rem;
+  color: #555555;
+  margin-bottom: 20px;
+  line-height: 1.7;
+  max-width: 650px; /* Ancho máximo para la legibilidad del párrafo */
+
+  /* --- Animación inicial para los párrafos --- */
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(5px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out,
+    filter 0.8s ease-out;
+}
+
+.info-button {
+  padding: 15px 45px;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(
+    90deg,
+    #ff9d00 0%,
+    #ff6600 100%
+  ); /* Un azul profesional */
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(255, 150, 2, 0.25);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  letter-spacing: 0.8px;
+
+  /* --- Animación inicial para el botón --- */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.info-button:hover {
+  background: linear-gradient(90deg, #ff6f00 0%, #ef6d15 100%);
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(255, 140, 0, 0.35);
+}
+
+.info-content-image {
+  flex-shrink: 0;
+  width: 500px; /* Tamaño de la imagen */
+  height: 350px;
+  display: flex;
+  align-items: center;
+  animation: floatY 3.5s ease-in-out infinite alternate;
+  justify-content: center;
+
+  overflow: hidden;
+
+  /* --- Animación inicial para la imagen --- */
+  opacity: 0;
+  transform: translateX(100px); /* Viene desde la derecha */
+  filter: blur(8px);
+  transition: opacity 1s ease-out, transform 1s ease-out, filter 1s ease-out;
+}
+
+.info-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* --- ESTADO FINAL DE ANIMACIÓN (cuando .info-container TIENE 'info-active-section') --- */
+/* Esta clase 'info-active-section' se añade por JavaScript */
+
+.info-container.info-active-section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info-container.info-active-section .info-content-image {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+  transition-delay: 0.2s; /* La imagen aparece un poco después */
+}
+
+.info-container.info-active-section .info-heading,
+.info-container.info-active-section .info-paragraph {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Escalonamiento para los elementos de texto */
+.info-container.info-active-section .info-heading {
+  transition-delay: 0.4s;
+}
+.info-container.info-active-section .info-paragraph:nth-of-type(1) {
+  transition-delay: 0.6s;
+}
+.info-container.info-active-section .info-paragraph:nth-of-type(2) {
+  transition-delay: 0.8s;
+}
+
+.info-container.info-active-section .info-button {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1s; /* El botón aparece después del texto */
+}
+
+/* --- RESET PARA RE-ANIMACIÓN (cuando la sección sale de la vista) --- */
+/* Cuando el '.info-container' NO tiene 'info-active-section', los hijos vuelven a su estado inicial */
+
+.info-container:not(.info-active-section) .info-content-image {
+  opacity: 0;
+  transform: translateX(100px);
+  filter: blur(8px);
+}
+
+.info-container:not(.info-active-section) .info-heading,
+.info-container:not(.info-active-section) .info-paragraph {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(5px);
+}
+
+.info-container:not(.info-active-section) .info-button {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* --- Media Queries para Responsividad de la nueva sección --- */
+@media (max-width: 900px) {
+  .info-container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 10px;
+  }
+  .info-content-image {
+    width: 320px;
+    height: 220px;
+  }
+  .info-heading {
+    font-size: 2rem;
+  }
+  .info-paragraph {
+    font-size: 1rem;
+  }
+  .info-button {
+    font-size: 0.95rem;
+    padding: 12px 30px;
+  }
+  /* Ajustes de delay para móviles si es necesario */
+  .info-container.info-active-section .info-content-image {
+    transition-delay: 0.1s;
+  }
+  .info-container.info-active-section .info-heading {
+    transition-delay: 0.3s;
+  }
+  .info-container.info-active-section .info-paragraph:nth-of-type(1) {
+    transition-delay: 0.4s;
+  }
+  .info-container.info-active-section .info-paragraph:nth-of-type(2) {
+    transition-delay: 0.5s;
+  }
+  .info-container.info-active-section .info-button {
+    transition-delay: 0.6s;
+  }
+}
+
+@media (max-width: 600px) {
+  .info-container {
+    padding: 20px 0;
+    gap: 30px;
+  }
+  .info-content-image {
+    width: 250px;
+    height: 180px;
+  }
+  .info-heading {
+    font-size: 1.7rem;
+  }
+  .info-paragraph {
+    font-size: 0.9rem;
+  }
+}
