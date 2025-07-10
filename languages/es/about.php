@@ -7,62 +7,60 @@ $texts = [
     // About company section
     'years_exp' => 'Años de Experiencia',
     'company_title' => 'Nuestra Historia',
-    'company_desc_1' => 'Sepstar México S DE RL DE CV fue registrada y establecida en mayo de 2024 y entró oficialmente en producción a mediados de abril de 2025. Sepstar México está ubicada en Monterrey, provincia de Nuevo León, México.',
-    'company_desc_2' => 'La fábrica independiente cubre un área de 9,000 metros cuadrados. En la primera fase, se invirtieron 12 máquinas de moldeo por inyección con capacidades que van de 120 a 850 toneladas y tres líneas de producción de ensamblaje totalmente automáticas.',
-    'company_desc_3' => 'Principalmente atiende a clientes OEM y ODM en las industrias de electrodomésticos y automotriz en América del Norte. Sepstar México se adherirá al principio de proporcionar a los clientes productos y servicios de alta calidad y alto valor añadido, y se esforzará por alcanzar la excelencia para ofrecer servicios oportunos y eficientes a los clientes en América del Norte.',
+    'company_desc_1' => 'Sepstar México está comprometida con la calidad e innovación en cada proyecto.',
+    'company_desc_2' => 'Nuestro equipo está altamente capacitado y enfocado en la satisfacción del cliente.',
+    'company_desc_3' => 'Invertimos en tecnología y mejora continua para superar expectativas.',
     
-    'feature_1' => 'Alta Calidad',
-    'feature_2' => 'Innovación Tecnológica',
-    'feature_3' => 'Entrega a Tiempo',
-    'feature_4' => 'Precios Competitivos',
+    'feature_1' => 'Tecnología de punta',
+    'feature_2' => 'Equipo calificado',
+    'feature_3' => 'Enfoque al cliente',
+    'feature_4' => 'Mejora continua',
     
-    // Mission, vision, values section
-    'mvv_title' => 'Misión, Visión y Valores',
-    'mission_title' => 'Nuestra Misión',
-    'mission_desc' => 'Proporcionar soluciones de fabricación de alta calidad y tecnología avanzada a nuestros clientes en las industrias automotriz y de electrodomésticos, superando sus expectativas con servicios personalizados y excelencia operativa.',
-    'vision_title' => 'Nuestra Visión',
-    'vision_desc' => 'Ser reconocidos como el socio de fabricación preferido en América del Norte, destacando por nuestra innovación, calidad, confiabilidad y compromiso con la satisfacción del cliente y la sostenibilidad.',
+    'mission_desc' => 'Estamos comprometidos a brindar soluciones innovadoras y de alta calidad para nuestros clientes.',
+    'vision_desc' => 'Ser reconocidos como líderes en la industria manufacturera en América del Norte.',
     'values_title' => 'Nuestros Valores',
-    'values_desc' => 'Excelencia en calidad, integridad en todas nuestras relaciones, innovación continua, responsabilidad corporativa y enfoque centrado en el cliente son los pilares fundamentales que guían nuestras operaciones diarias.',
+    'values_desc' => 'Integridad, innovación, trabajo en equipo y satisfacción del cliente.',
+    // SEO y títulos de página
+    'page_title' => 'Acerca de Sepstar México',
+    'page_subtitle' => 'Fabricación de alta calidad para la industria automotriz y de electrodomésticos.',
+    'company_title' => 'Nuestra Empresa',
     
     // History timeline
-    'history_title' => 'Nuestra Trayectoria',
-    
+    'history_title' => 'Nuestra Historia',
     'history_year_1' => '2024',
-    'history_event_1' => 'Fundación de Sepstar México',
-    'history_desc_1' => 'Sepstar México S DE RL DE CV fue registrada y establecida en mayo de 2024 en Monterrey, Nuevo León, iniciando la planificación y construcción de nuestras instalaciones de fabricación.',
+    'history_event_1' => 'Registro de la Empresa',
+    'history_desc_1' => 'Sepstar México S DE RL DE CV fue registrada y establecida oficialmente en mayo de 2024.',
     
     'history_year_2' => '2025',
-    'history_event_2' => 'Inicio de Operaciones',
-    'history_desc_2' => 'En abril de 2025, la planta de producción comenzó oficialmente sus operaciones con 12 máquinas de moldeo por inyección y tres líneas de ensamblaje automáticas, atendiendo a los primeros clientes en América del Norte.',
+    'history_event_2' => 'Inicio de Producción',
+    'history_desc_2' => 'La producción inició oficialmente a mediados de abril de 2025 con 12 máquinas y 3 líneas de ensamble.',
     
-    'history_year_3' => '2026',
-    'history_event_3' => 'Expansión de Capacidad',
-    'history_desc_3' => 'Ampliación de nuestras instalaciones con 8 máquinas adicionales y la implementación de sistemas avanzados de automatización para mejorar la eficiencia y capacidad productiva.',
+    'history_event_3' => 'Primer Gran Proyecto',
+    'history_desc_3' => 'Completamos nuestro primer gran proyecto OEM para la industria automotriz.',
     
-    'history_year_4' => '2027',
-    'history_event_4' => 'Certificaciones Internacionales',
-    'history_desc_4' => 'Obtención de importantes certificaciones internacionales de calidad y sistemas de gestión ambiental, fortaleciendo nuestra posición en el mercado norteamericano.',
+    'history_year_4' => '2026',
+    'history_event_4' => 'Expansión',
+    'history_desc_4' => 'Expansión de instalaciones y aumento de capacidad productiva.',
     
     // Team section
-    'team_title' => 'Nuestro Equipo Directivo',
-    'team_subtitle' => 'Conoce a los profesionales que lideran Sepstar México con experiencia, visión y compromiso.',
+    'team_title' => 'Nuestro Equipo',
+    'team_subtitle' => 'Conoce a los profesionales detrás de Sepstar México.',
     
-    'team_member_1_name' => 'Zhang Wei',
-    'team_member_1_position' => 'Director General',
+    'team_member_1_name' => 'Jing Zhang',
+    'team_member_1_position' => 'Gerente General',
     
-    'team_member_2_name' => 'Carlos Rodríguez',
-    'team_member_2_position' => 'Director de Operaciones',
+    'team_member_2_name' => 'Juan Pérez',
+    'team_member_2_position' => 'Gerente de Producción',
     
-    'team_member_3_name' => 'María González',
-    'team_member_3_position' => 'Directora de Calidad',
+    'team_member_3_name' => 'Ana Gómez',
+    'team_member_3_position' => 'Gerente de Calidad',
     
-    'team_member_4_name' => 'Luis Hernández',
-    'team_member_4_position' => 'Director Comercial',
+    'team_member_4_name' => 'Li Wei',
+    'team_member_4_position' => 'Gerente de Ingeniería',
     
     // Certifications
-    'certifications_title' => 'Nuestras Certificaciones',
-    'certifications_subtitle' => 'Nos comprometemos con los más altos estándares internacionales de calidad y gestión empresarial.',
+    'certifications_title' => 'Certificaciones',
+    'certifications_subtitle' => 'Nuestra empresa está certificada para garantizar los más altos estándares de calidad.',
     
     'certification_1_name' => 'ISO 9001:2015',
     'certification_1_desc' => 'Sistema de Gestión de Calidad que garantiza procesos estandarizados y control de calidad riguroso en todas nuestras operaciones.',
@@ -73,9 +71,26 @@ $texts = [
     'certification_3_name' => 'IATF 16949:2016',
     'certification_3_desc' => 'Estándar internacional de sistemas de gestión de calidad específico para la industria automotriz, asegurando excelencia en producción.',
     
+    // Sección de certificaciones
+    'cert_1_title' => 'Certificado IATF 16949 - Wuhu Sepstar',
+    'cert_1_desc' => 'Certificación internacional específica para la industria automotriz',
+    'cert_2_title' => 'Certificado Nacional de Empresa Científica',
+    'cert_2_desc' => 'Reconocimiento nacional por innovación y desarrollo científico',
+    'cert_3_title' => 'Certificado IATF 16949 - Zhuhai Sepstar',
+    'cert_3_desc' => 'Certificación internacional específica para la industria automotriz',
+    'cert_4_title' => 'Certificado de Empresa de Mediana Escala',
+    'cert_4_desc' => 'Reconocimiento oficial como empresa de mediana escala de alta calidad',
+    'cert_section_title' => 'Comprometidos con la excelencia y calidad',
+    'cert_section_desc' => 'Nuestras certificaciones respaldan nuestro compromiso con los más altos estándares en procesos de fabricación.',
+    
     // CTA Section
-    'cta_title' => '¿Quieres Conocer Más Sobre Nosotros?',
-    'cta_text' => 'Contáctanos para programar una visita a nuestras instalaciones o para obtener más información sobre nuestras capacidades y servicios.',
-    'cta_button' => 'Contactar Ahora'
+    'cta_title' => '¿Listo para llevar tu proyecto al siguiente nivel?',
+    'cta_text' => 'Contáctanos hoy y descubre cómo podemos ayudarte a lograr tus objetivos.',
+    'cta_button' => 'Contáctanos',
+    // Footer
+    'footer_rights' => 'Todos los derechos reservados.',
+    'footer_privacy' => 'Aviso de Privacidad',
+    'footer_terms' => 'Términos y Condiciones',
+    'footer_developed_by' => 'Desarrollado por'
 ];
 ?>

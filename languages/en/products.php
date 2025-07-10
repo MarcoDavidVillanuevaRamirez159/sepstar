@@ -66,5 +66,33 @@ $texts = [
     // Pagination
     'previous' => 'Previous',
     'next' => 'Next',
+    
+    // Footer
+    'footer_company_desc' => 'Sepstar Mexico S DE RL DE CV is committed to providing customers with high-quality, high value-added products and services, striving for excellence and timely, efficient service.',
+    'footer_links' => 'Links',
+    'footer_home' => 'Home',
+    'footer_about' => 'About Us',
+    'footer_manufacturing' => 'Manufacturing',
+    'footer_products' => 'Products',
+    'footer_news' => 'News',
+    'footer_contact' => 'Contact',
+    'footer_services' => 'Services',
+    'footer_oem' => 'OEM Manufacturing',
+    'footer_odm' => 'ODM Manufacturing',
+    'footer_quality' => 'Quality Control',
+    'footer_supply' => 'Supply Chain',
+    'footer_logistics' => 'Logistics',
+    'footer_contact_title' => 'Contact',
+    'footer_address' => 'No. 1, Science and Technology 7th road, Monterrey, Nuevo León, México',
+    'footer_phone' => '+86-756-3390011',
+    'footer_email' => 'zhangjing@sepstar-eti.com',
+    'footer_newsletter' => 'Subscribe to our newsletter',
+    'footer_email_placeholder' => 'Your email',
+    'footer_subscribe' => 'Subscribe',
+    'footer_rights' => 'All rights reserved.',
+    'footer_privacy' => 'Privacy Policy',
+    'footer_terms' => 'Terms and Conditions',
+    'footer_sitemap' => 'Sitemap',
+    'footer_developed_by' => 'Developed by',
 ];
 ?>

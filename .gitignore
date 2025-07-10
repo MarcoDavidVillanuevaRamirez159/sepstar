@@ -1,3 +1,55 @@
+# Archivos y carpetas a ignorar para un proyecto PHP en XAMPP
+/vendor/
+/node_modules/
+.env
+.env.*
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+composer.lock
+package-lock.json
+npm-debug.log
+*.sql
+*.sqlite
+*.db
+*.zip
+*.tar.gz
+*.gz
+*.rar
+*.7z
+# XAMPP
+xampp/
+# Archivos de configuración locales
+includes/config.local.php
+# Archivos de sistema
+*.swp
+*.swo
+# Archivos de caché
+cache/
+session/
+# Archivos de pruebas
+phpunit.xml
+phpunit.xml.dist
+# Archivos de backup
+backup/
+# Archivos de usuario
+*.user
+# Archivos de imágenes temporales
+*.png~
+*.jpg~
+*.jpeg~
+*.gif~
+# Otros
+*.bak
+*.old
+*.orig
+*.save
 # Dependencias de NodeJS
 node_modules/
 npm-debug.log

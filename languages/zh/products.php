@@ -66,5 +66,33 @@ $texts = [
     // Pagination
     'previous' => '上一页',
     'next' => '下一页',
+    
+    // Footer
+    'footer_company_desc' => 'Sepstar 墨西哥 S DE RL DE CV 致力于为客户提供高质量、高附加值的产品和服务，追求卓越，及时高效的服务。',
+    'footer_links' => '链接',
+    'footer_home' => '首页',
+    'footer_about' => '关于我们',
+    'footer_manufacturing' => '制造能力',
+    'footer_products' => '产品',
+    'footer_news' => '新闻',
+    'footer_contact' => '联系我们',
+    'footer_services' => '服务',
+    'footer_oem' => 'OEM 制造',
+    'footer_odm' => 'ODM 制造',
+    'footer_quality' => '质量控制',
+    'footer_supply' => '供应链',
+    'footer_logistics' => '物流',
+    'footer_contact_title' => '联系方式',
+    'footer_address' => '墨西哥新莱昂州蒙特雷科技七路1号',
+    'footer_phone' => '+86-756-3390011',
+    'footer_email' => 'zhangjing@sepstar-eti.com',
+    'footer_newsletter' => '订阅我们的新闻通讯',
+    'footer_email_placeholder' => '您的邮箱',
+    'footer_subscribe' => '订阅',
+    'footer_rights' => '保留所有权利。',
+    'footer_privacy' => '隐私政策',
+    'footer_terms' => '条款和条件',
+    'footer_sitemap' => '网站地图',
+    'footer_developed_by' => '开发者',
 ];
 ?>

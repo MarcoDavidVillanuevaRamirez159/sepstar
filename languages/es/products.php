@@ -66,5 +66,33 @@ $texts = [
     // Paginación
     'previous' => 'Anterior',
     'next' => 'Siguiente',
+    
+    // Footer
+    'footer_company_desc' => 'Sepstar México S DE RL DE CV está comprometida a proporcionar a los clientes productos y servicios de alta calidad y alto valor agregado, buscando la excelencia y un servicio oportuno y eficiente.',
+    'footer_links' => 'Enlaces',
+    'footer_home' => 'Inicio',
+    'footer_about' => 'Sobre nosotros',
+    'footer_manufacturing' => 'Capacidad de fabricación',
+    'footer_products' => 'Productos',
+    'footer_news' => 'Noticias',
+    'footer_contact' => 'Contacto',
+    'footer_services' => 'Servicios',
+    'footer_oem' => 'Fabricación OEM',
+    'footer_odm' => 'Fabricación ODM',
+    'footer_quality' => 'Control de Calidad',
+    'footer_supply' => 'Cadena de Suministro',
+    'footer_logistics' => 'Logística',
+    'footer_contact_title' => 'Contacto',
+    'footer_address' => 'No. 1, Science and Technology 7th road, Monterrey, Nuevo León, México',
+    'footer_phone' => '+86-756-3390011',
+    'footer_email' => 'zhangjing@sepstar-eti.com',
+    'footer_newsletter' => 'Suscríbete a nuestro boletín',
+    'footer_email_placeholder' => 'Tu correo electrónico',
+    'footer_subscribe' => 'Suscribirse',
+    'footer_rights' => 'Todos los derechos reservados.',
+    'footer_privacy' => 'Política de Privacidad',
+    'footer_terms' => 'Términos y Condiciones',
+    'footer_sitemap' => 'Mapa del sitio',
+    'footer_developed_by' => 'Desarrollado por',
 ];
 ?>
