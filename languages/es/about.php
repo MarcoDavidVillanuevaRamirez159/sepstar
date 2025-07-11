@@ -83,7 +83,33 @@ $texts = [
     'cert_section_title' => 'Comprometidos con la excelencia y calidad',
     'cert_section_desc' => 'Nuestras certificaciones respaldan nuestro compromiso con los más altos estándares en procesos de fabricación.',
     
-    // CTA Section
+    // Banner y alt de imágenes
+    'certifications_badge' => 'Garantía de Calidad',
+    'cert_banner_1_alt' => 'Certificado de Empresa de Alta Tecnología',
+    'cert_banner_2_alt' => 'Certificado de Empresa de Alta Tecnología 2',
+    'cert_banner_3_alt' => 'Certificado Nacional de Empresa Científica',
+    'team_banner_alt' => 'Equipo de trabajo',
+    // Sección Misión, Visión, Valores
+    'mvv_title' => 'Misión, Visión y Valores',
+    'mission_title' => 'Nuestra Misión',
+    'vision_title' => 'Nuestra Visión',
+    // Línea de tiempo
+    'history_year_3' => '2025',
+    // Footer extendido
+    'footer_links' => 'Enlaces',
+    'footer_home' => 'Inicio',
+    'footer_about' => 'Sobre Nosotros',
+    'footer_manufacturing' => 'Manufactura',
+    'footer_products' => 'Productos',
+    'footer_news' => 'Noticias',
+    'footer_contact' => 'Contacto',
+    'footer_services' => 'Servicios',
+    'footer_oem' => 'Fabricación OEM',
+    'footer_odm' => 'Fabricación ODM',
+    'footer_quality' => 'Control de Calidad',
+    'footer_supply' => 'Cadena de Suministro',
+    'footer_logistics' => 'Logística',
+    'footer_company_desc' => 'Sepstar México S DE RL DE CV está comprometida a ofrecer productos y servicios de alta calidad y valor agregado, buscando la excelencia y un servicio eficiente y oportuno.',
     'cta_title' => '¿Listo para llevar tu proyecto al siguiente nivel?',
     'cta_text' => 'Contáctanos hoy y descubre cómo podemos ayudarte a lograr tus objetivos.',
     'cta_button' => 'Contáctanos',
